@@ -1,4 +1,3 @@
-
 Ventas web
 
 Punto de venta creado en php usando laravel, muy siemple aun, vamos en desarrollo
@@ -12,7 +11,7 @@ Contribuciones
 Actualmente el proyecto se encuentra enpezando por lo que si quieres aportar ere bienvenido
 
 Ejemplos
-Sin derechos © 2021
+© 2021
 Acerca del projecto
 Pasos para inmplementar el proyecto
 
@@ -26,6 +25,7 @@ Pasos para inmplementar el proyecto
 
 5-. Desde la terminal de laragon/puntodeventaweb instalar las dependencias de PHP "composer install"
 
+npm i vue-loader
 
 npm update vue-loader
 
@@ -36,6 +36,25 @@ npm install vue-loader@^15.9.7 --save-dev --legacy-peer-deps
 php artisan ui material
 
 php artisan migrate --seed
+
+añadir debugBar
+
+Installation
+
+composer require barryvdh/laravel-debugbar
+
+The Debugbar will be enabled when APP_DEBUG is true and Local
+
+If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
+
+Barryvdh\Debugbar\ServiceProvider::class,
+If you want to use the facade to log messages, add this to your facades in app.php:
+
+'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
+
+Copy the package config to your local config with the publish command:
+
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 
 6-. Desde la terminal de laragon/puntodeventaweb instalar las dependencias de JS "npm install && npm run dev"
 
